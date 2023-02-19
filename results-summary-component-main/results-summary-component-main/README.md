@@ -31,9 +31,9 @@ Users should be able to:
 
 | The design                            | My work                               |
 |---------------------------------------|---------------------------------------|
-|[desktop](./assets/design/desktop-design.jpg) | [](./assets/final/desktop.png)        |
-|[desktop](./assets/design/active-states.jpg)  | [](./assets/final/desktop-state.png)  |
-|[mobile](./assets/design/mobile-design.jpg)  | [](./assets/final/phone.png)          |
+|![desktop](./assets/design/desktop-design.jpg) | ![](./assets/final/desktop.png)        |
+|![desktop](./assets/design/active-states.jpg)  | ![](./assets/final/desktop-state.png)  |
+|![mobile](./assets/design/mobile-design.jpg)  | ![](./assets/final/phone.png)          |
 
 ### Links
 
