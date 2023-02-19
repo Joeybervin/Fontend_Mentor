@@ -1,0 +1,261 @@
+/* imports */
+/* fonts => Hanken Grotesk (google fonts) : https://fonts.google.com/specimen/Hanken+Grotesk */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+/* Small reset */
+html {
+    width : 100%;
+    height : 100%;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+*:before, *:after {
+    box-sizing: inherit;
+}
+
+body, p, ol, ul, button {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+p, li, span {
+    display: inline-block;
+    font-size: 14px;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* _______________________________________________________________________________ */
+
+/* Global styling */
+
+body {
+    height : 100%;
+    
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* LEFT */
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(hsl(252, 100%, 67%) 2%, hsl(241, 81%, 54%));
+    border-radius: 0 0 30px 30px;
+}
+.result > div {
+    text-align: center;
+    max-width : 70%;
+    margin : 15px auto;
+}
+.result > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width : 115px;
+    min-height : 115px;
+    margin : 20px auto ;
+    border-radius: 100%;
+    background: linear-gradient(hsl(256, 72%, 46%) 10%, hsla(241, 72%, 46%, 0));
+}
+/* div result paragraph color */
+.result > div  p{
+    color : hsla(241, 100%, 89%, 0.8);
+}
+.result > div > div > p:nth-child(1), .result > div > p:nth-child(3) {
+    color : hsl(0, 0%, 100%);
+}
+/* div result paragraph size and weight */
+.result > div > p:last-of-type, .result > div > div > p:last-of-type {
+    font-size: 13px;
+}
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+.result > div > div > p:nth-child(1) {
+    font-size: 45px;
+    font-weight: 800;
+    animation: counter 5s forwards ease-in-out;
+    counter-reset: num var(--num);
+}
+.result > div > div > p:nth-child(1)::after {
+    content: counter(num);
+}
+/* animation */
+@keyframes counter {
+    from {
+        --num: 0;
+    }
+    to {
+        --num: 76;
+    }
+}
+.result > div > p:nth-child(3) {
+    margin-bottom: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.result > div > p:last-of-type{
+    margin : 5px 0 25px 0;
+}
+
+/* RIGHT */
+
+.summary {
+    display: flex;
+    flex-grow: 1;
+}
+.summary_content {
+    margin: 20px 35px;
+    width : 90%;
+}
+.summary_content > p {
+    font-size: 16px;    
+    font-weight: 700;
+}
+.summary_content > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    padding : 12px 10px;
+    margin : 12px 0;
+
+}
+.summary_content > div > div p{
+    font-weight: 800;
+    letter-spacing: 0.7px;
+}
+.summary_content > div > div  > div {
+    display: flex;
+    gap: 10px;
+}
+.summary  span {
+    color : hsla(224, 30%, 27%, 0.5);
+}
+.summary_content > div > div > p {
+    color: hsl(224, 30%, 27%);
+}
+
+.reaction {
+    color : hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%, 0.05) ;
+    box-shadow: 0px 12px 0px -10px hsl(0, 0%, 100%),
+    0px -12px 0px -10px  hsl(0, 0%, 100%),
+    12px 0px 0px -10px hsl(0, 0%, 100%),
+    -12px 0px 0px -10px hsl(0, 0%, 100%),
+    0px 0px 0px 1px hsla(0, 100%, 67%, 0.15);
+    
+}
+.memory {
+    color : hsl(39, 100%, 56%);
+    background-color: hsla(39, 100%, 56%, 0.05) ;
+    box-shadow: 0px 12px 0px -10px hsl(0, 0%, 100%),
+    0px -12px 0px -10px  hsl(0, 0%, 100%),
+    12px 0px 0px -10px hsl(0, 0%, 100%),
+    -12px 0px 0px -10px hsl(0, 0%, 100%),
+    0px 0px 0px 1px hsla(39, 100%, 56%, 0.15);
+}
+.verbal {
+    color : hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%, 0.05);
+    box-shadow: 0px 12px 0px -10px hsl(0, 0%, 100%),
+    0px -12px 0px -10px  hsl(0, 0%, 100%),
+    12px 0px 0px -10px hsl(0, 0%, 100%),
+    -12px 0px 0px -10px hsl(0, 0%, 100%),
+    0px 0px 0px 1px hsla(166, 100%, 37%, 0.15);
+}
+.visual {
+    color : hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%, 0.05) ;
+    box-shadow: 0px 12px 0px -10px hsl(0, 0%, 100%),
+    0px -12px 0px -10px  hsl(0, 0%, 100%),
+    12px 0px 0px -10px hsl(0, 0%, 100%),
+    -12px 0px 0px -10px hsl(0, 0%, 100%),
+    0px 0px 0px 1px hsla(234, 85%, 45%, 0.15);
+}
+
+button {
+    border-radius: 30px;
+    width : 100%;
+    padding : 15px 0 ;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    letter-spacing : 0.5px;
+    background-color: hsl(224, 30%, 27%);
+    font-size: 16px;
+    margin-top: 15px;
+
+}
+button:hover {
+    background-color: hsl(241, 81%, 54%);
+}
+button:focus, button:active {
+    color: hsl(224, 30%, 27%);
+    border : 1px solid hsl(224, 30%, 27%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+/* FOOTER */
+footer {
+    display : none;
+}
+
+
+/* For big screen */
+@media screen and (min-width: 426px) {
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .main {
+        max-width: 550px;
+        min-height: 360px;
+        border-radius: 30px;
+        box-shadow: 15px 25px 51px -26px hsla(241, 81%, 54%, 0.4)
+    }
+
+    .result {
+        width: 47%;
+        border-radius: 30px;
+    }
+    .result > div > div {
+        max-width : 145px;
+        min-height : 145px;
+        
+    }
+
+    footer {
+        position : absolute;
+        bottom : 0;
+        display : block;
+        width : 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+    
+}
