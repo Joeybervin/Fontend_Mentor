@@ -71,5 +71,5 @@ To see how you can add code snippets, see below:
 
 ## Author
 
-- Linkedin - [Add your name here](https://www.linkedin.com/in/joey-bervin/)
-- Frontend Mentor - [Joey ](https://www.frontendmentor.io/profile/Joeybervin)
+- Linkedin - [Joey Bervin](https://www.linkedin.com/in/joey-bervin/)
+- Frontend Mentor - [BeJoy ](https://www.frontendmentor.io/profile/Joeybervin)
