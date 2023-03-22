@@ -32,12 +32,12 @@ main > div {
 div > div {
     margin: 0 20px;
 }
-h1 {
+main p:nth-child(1) {
     font-weight: 700; 
     color: hsl(218, 44%, 22%);
-    font-size: 18px;
+    font-size: 21.5px;
 }
-main p:first-of-type {
+main p:nth-child(2) {
     color : hsl(220, 15%, 55%);
 }
 img {
