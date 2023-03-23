@@ -53,7 +53,7 @@ Users should be able to:
 - Javascript
 
 ### Useful resources
-- Clamp : generator for fluid typography [generator url](https://modern-fluid-typography.vercel.app/)
+- Clamp : [Modern fluid typography editor](https://modern-fluid-typography.vercel.app/) by Adrian Bece
 
 ## Author
 
