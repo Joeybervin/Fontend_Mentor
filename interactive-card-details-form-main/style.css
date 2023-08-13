@@ -3,6 +3,12 @@ html, body {
     height: 100vh;
 }
 
+p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
 img {
     max-width: 100%;
 }
@@ -32,15 +38,29 @@ div.main__container {
     position: relative;
     width: clamp(50px, 85%, 100%);
 }
+.card__container > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    color: hsl(0, 0%, 100%);
+}
 .card__container--front {
     transform: translateY(-65px);
     align-self: flex-start;
+    z-index: 1;
 }
 .card__container--back {
     margin-top: 25px;
     align-self: flex-end;
 }
-
+.card__container--back > div > p {
+    position: absolute;
+    right: 35px;
+    top : 61px;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
 
 @media screen and (min-width: 400px) {
 
@@ -75,5 +95,9 @@ div.main__container {
         transform: translateY(0);
     }
     
+    .card__container--back > div > p {
+        right: 45px;
+        top : 92px;
+    }
 }
 
