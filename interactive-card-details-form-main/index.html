@@ -23,6 +23,7 @@
 
     <div class="main__container">
 
+      <!-- LEFT SIDE (credit card)-->
       <div class="container--left">
         <!-- FRONT -->
         <div class="card__container card__container--front">
@@ -53,9 +54,54 @@
         </div>
       </div>
 
+      <!-- RIGHT SIDE (form)-->
 
+      
       <div class="container--right">
-        <form action="" method="post"></form>
+        <!-- FORM -->
+        <form method="POST">
+          <!-- Cardholder name -->
+          <div>
+            <label for="name">Carholder name</label>
+            <input type="text"  maxlength="30" name="name" id="name" placeholder="e.g. Jane Applesed">
+            <span class="errorMessage__text errorMessage__text--name name"></span>
+          </div>
+          <!-- Card number -->
+          <div>
+            <label for="cardNumber">Card Number</label>
+            <input type="text"  maxlength="16" name="cardNumber" id="cardNumber" data-error-target="cardNumberError" onchange="letterInputCheck(this.value,'cardNumberError')" placeholder="e.g. 1234 5678 9123 0000">
+            <span class="errorMessage__text errorMessage__text--cardNumber" id="cardNumberError"></span>
+          </div>
+          <!-- Exp date + Cvc -->
+          <div>
+            <!-- Exp. date (mm/yy) -->
+            <div>
+              <label for="expDate">Exp. date (mm/yy)</label>
+              <div class="expDate__container">
+                <!-- month -->
+                <input type="text"  maxlength="2" name="dateMonth" id="dateMonth" placeholder="MM">
+                <!-- year -->
+                <input type="text"  maxlength="2" name="dateYear" id="dateYear" placeholder="YY">
+              </div>
+              <span class="errorMessage__text errorMessage__text--expDate"></span>
+            </div>
+            <!-- CVC -->
+            <div>
+              <label for="cvc">Cvc</label>
+              <input type="text"  maxLength="3" name="cvc" id="cvc" placeholder="e.g. 123">
+              <span class="errorMessage__text errorMessage__text--cvc"></span>
+            </div>
+          </div>
+      
+          <button type="submit" >Confirm</button>
+        </form>
+        <!-- SUBMITTING MESSAGE -->
+        <div class="formSubmitAnswer hide">
+          <img src="./images/icon-complete.svg" alt="icon complete">
+          <p>Thank you!</p>
+          <p>We've aadded your card details</p>
+          <button>Continue</button>
+        </div>
       </div>
 
     </div>

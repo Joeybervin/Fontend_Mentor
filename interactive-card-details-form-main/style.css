@@ -3,29 +3,77 @@ html, body {
     height: 100vh;
 }
 
-p {
+p, label, button, input {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
 }
-
+label {
+    display: block;
+    color : hsl(278, 68%, 11%);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
 img {
     max-width: 100%;
 }
-
+button {
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    padding : 18px;
+    border-radius : 10px;
+    width: 100%;
+    font-size: clamp(1.125rem, 1.037rem + 0.3756vw, 1.375rem);
+    margin-top: 30px;
+    border: none;
+}
+button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(21deg, hsl(278, 68%, 11%),hsl(278, 94%, 30%));
+}
+button:active, button:focus {
+    background-color: hsl(278, 94%, 30%);
+}
+input {
+    border-radius: 8px;
+    width: 100%;
+    padding : 10px 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: hsl(279, 6%, 55%) 1px solid;
+}
+input:focus {
+    outline: none;
+    background: 
+    linear-gradient(#ffffff 0 0) padding-box, /* inside the input*/
+    linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+.inputError {
+    border :hsl(0, 100%, 66%) solid 2px;
+}
+input::placeholder {
+    color: hsl(270, 3%, 87%);
+}
 section#main {
     height: 100%;
     background-image: url("./images/bg-main-mobile.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
-
 div.main__container {
     width: 95%;
     margin: 0 auto;
-
+}
+.hide {
+    display: none;
+}
+.noError {
+    display: none;
 }
 
+/* ----------->  LEFT/TOP SIDE <----------- */
 .container--left {
     max-width: fit-content;
     display: flex;
@@ -33,7 +81,6 @@ div.main__container {
     align-items: center;
     margin: 0 auto;
 }
-
 .card__container {
     position: relative;
     width: clamp(50px, 85%, 100%);
@@ -69,7 +116,7 @@ div.main__container {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    font-size: 25px;
+    font-size: clamp(1.25rem, 1.14rem + 0.4695vw, 1.5625rem);
 }
 .cardInformations__container > div p {
     font-size: 12px;
@@ -92,6 +139,57 @@ div.main__container {
     letter-spacing: 3px;
 }
 
+/* ----------->  RIGHT/BOTTOM SIDE <----------- */
+.container--right {
+    transform: translateY(-50px);
+    flex-grow: 1;
+    
+}
+form {
+    margin: auto;
+    width: fit-content;
+    max-width: 450px;
+}
+form > div {
+    margin-top: 20px;
+}
+
+form > div:nth-child(3), .expDate__container {
+    display: flex;
+    gap: 10px;
+}
+form > div:nth-child(3) {
+    gap : 15px;
+}
+.expDate__container > input  {
+    width: 85px;
+}
+.errorMessage__text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color:  hsl(0, 100%, 66%);
+}
+.formSubmitAnswer {
+    margin : 30px auto 0 auto;
+    width: 95%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.formSubmitAnswer img + p{
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    letter-spacing: 0.50rem;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.formSubmitAnswer img + p + p {
+    color: hsl(279, 6%, 55%);
+}
+
+
 @media screen and (min-width: 400px) {
 
     section#main {
@@ -108,26 +206,30 @@ div.main__container {
         background-size: contain;
     }
 
+    /* ----------->  LEFT/TOP SIDE <----------- */
     div.main__container {
         display: flex;
         align-items: center;
-        width: 80%;
+        width: 75%;
         height: 100%;
     }
-    
     .container--left {
         display: flex;
         flex-direction: column;
-        margin : 0;
+        margin-right : 20px;
     }
-    
     .card__container--front {
         transform: translateY(0);
     }
-    
     .card__container--back > div > p {
         right: 45px;
         top : 92px;
+    }
+
+    /* ----------->  RIGHT/BOTTOM SIDE <----------- */
+    .container--right {
+        transform: translateY(0);
+        
     }
 }
 

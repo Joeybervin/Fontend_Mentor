@@ -1,0 +1,36 @@
+<form action="" method="POST">
+    <!-- Cardholder name -->
+    <div>
+      <label for="name">Carholder name</label>
+      <input type="text" placeholder="e.g. Jane Applesed">
+      <span class="errorMessage__text errorMessage__text--name">Error</span>
+    </div>
+    <!-- Card number -->
+    <div>
+      <label for="cardNumber">Card Number</label>
+      <input type="text" placeholder="e.g. 1234 5678 9123 0000">
+      <span class="errorMessage__text errorMessage__text--cardNumber">Error</span>
+    </div>
+    <!-- Exp date + Cvc -->
+    <div>
+      <!-- Exp. date (mm/yy) -->
+      <div>
+        <label for="expDate">Exp. date (mm/yy)</label>
+        <div class="expDate__container">
+          <!-- month -->
+          <input type="text" placeholder="MM">
+          <!-- year -->
+          <input type="text" placeholder="YY">
+        </div>
+        <span class="errorMessage__text errorMessage__text--expDate">Error</span>
+      </div>
+      <!-- CVC -->
+      <div>
+        <label for="cvc">Cvc</label>
+        <input type="text" placeholder="e.g. 123">
+        <span class="errorMessage__text errorMessage__text--cvc">Error</span>
+      </div>
+    </div>
+
+    <button type="submit">Confirm</button>
+  </form>
