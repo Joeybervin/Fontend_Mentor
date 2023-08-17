@@ -39,7 +39,7 @@
                 <!-- Card user name -->
                 <p>Jane Appleseed</p>
                 <!-- card expiration date -->
-                <p>00 / 00</p>
+                <p><span>00</span> / <span>00</span></p>
               </div>
             </div>
           </div>
@@ -69,8 +69,8 @@
           <!-- Card number -->
           <div>
             <label for="cardNumber">Card Number</label>
-            <input type="text"  maxlength="16" name="cardNumber" id="cardNumber" data-error-target="cardNumberError" onchange="letterInputCheck(this.value,'cardNumberError')" placeholder="e.g. 1234 5678 9123 0000">
-            <span class="errorMessage__text errorMessage__text--cardNumber" id="cardNumberError"></span>
+            <input type="text"  maxlength="19" name="cardNumber" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
+            <span class="errorMessage__text errorMessage__text--cardNumber"></span>
           </div>
           <!-- Exp date + Cvc -->
           <div>
@@ -93,14 +93,14 @@
             </div>
           </div>
       
-          <button type="submit" >Confirm</button>
+          <button type="submit">Confirm</button>
         </form>
         <!-- SUBMITTING MESSAGE -->
         <div class="formSubmitAnswer hide">
           <img src="./images/icon-complete.svg" alt="icon complete">
           <p>Thank you!</p>
           <p>We've aadded your card details</p>
-          <button>Continue</button>
+          <button type="button" id="continue" >Continue</button>
         </div>
       </div>
 

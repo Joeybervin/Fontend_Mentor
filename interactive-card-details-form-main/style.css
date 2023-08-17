@@ -2,7 +2,6 @@ html, body {
     max-width: 100vw;
     height: 100vh;
 }
-
 p, label, button, input {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.125rem;
@@ -42,6 +41,9 @@ input {
     margin-bottom: 5px;
     border: hsl(279, 6%, 55%) 1px solid;
 }
+input.error, input.error:focus {
+    border: 1px solid hsl(0, 100%, 66%) ;
+}
 input:focus {
     outline: none;
     background: 
@@ -67,9 +69,6 @@ div.main__container {
     margin: 0 auto;
 }
 .hide {
-    display: none;
-}
-.noError {
     display: none;
 }
 
@@ -184,28 +183,21 @@ form > div:nth-child(3) {
     margin-top: 25px;
     margin-bottom: 15px;
 }
-
 .formSubmitAnswer img + p + p {
     color: hsl(279, 6%, 55%);
 }
 
-
 @media screen and (min-width: 400px) {
-
     section#main {
         background-size: 100% 35%;
     }
 }
 
-
-
 @media screen and (min-width: 1024px) {
-
     section#main {
         background-image: url("./images/bg-main-desktop.png");
         background-size: contain;
     }
-
     /* ----------->  LEFT/TOP SIDE <----------- */
     div.main__container {
         display: flex;
@@ -225,7 +217,6 @@ form > div:nth-child(3) {
         right: 45px;
         top : 92px;
     }
-
     /* ----------->  RIGHT/BOTTOM SIDE <----------- */
     .container--right {
         transform: translateY(0);
