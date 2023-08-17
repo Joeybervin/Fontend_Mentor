@@ -103,6 +103,7 @@ document.getElementById("dateYear").addEventListener("input", function() {
 /* CVC */
 document.getElementById("cvc").addEventListener("input", function() {
     preventSpaceInput(this);
+    
     if (this.value.length < 3) {
         document.querySelector("span.errorMessage__text--cvc").innerHTML = "Invalid";
         applyRedBorder(this, "error");

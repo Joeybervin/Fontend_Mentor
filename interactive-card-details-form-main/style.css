@@ -74,6 +74,7 @@ div.main__container {
 
 /* ----------->  LEFT/TOP SIDE <----------- */
 .container--left {
+    width: 95%;
     max-width: fit-content;
     display: flex;
     flex-direction: column-reverse;
@@ -146,7 +147,7 @@ div.main__container {
 }
 form {
     margin: auto;
-    width: fit-content;
+    width: 90%;
     max-width: 450px;
 }
 form > div {
