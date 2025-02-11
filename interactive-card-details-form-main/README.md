@@ -26,10 +26,11 @@ This is a solution to the [Interactive card details form solution](https://www.f
 |![](./design/complete-state-mobile.jpg)  | ![](./project/complete-state-mobile.png)  |
 
 
-### Links
+<!-- ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-->
 
 ## My process
 

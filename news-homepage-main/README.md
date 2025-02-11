@@ -37,10 +37,12 @@ Users should be able to:
 |![](./assets/design/mobile-design.jpg)  | ![](./assets/final/mobile.png)          |
 |![](./assets/design/mobile-menu.jpg)  | ![](./assets/final/mobile-menu.png)          |
 
-### Links
+<!-- ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-->
+
 
 ## My process
 
